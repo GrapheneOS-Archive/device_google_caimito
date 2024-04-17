@@ -302,16 +302,6 @@
       "ResetOnInit": true
     },
     {
-      "Name": "SystemCpuset",
-      "Path": "/dev/cpuset/system/cpus",
-      "Values": [
-        "0-7",
-        "0-6"
-      ],
-      "DefaultIndex": 0,
-      "ResetOnInit": true
-    },
-    {
       "Name": "FGCpuset",
       "Path": "/dev/cpuset/foreground/cpus",
       "Values": [
@@ -2700,12 +2690,6 @@
       "Value": "DISPLAY_UPDATE_IMMINENT"
     },
     {
-      "PowerHint": "DISPLAY_IDLE",
-      "Node": "SystemCpuset",
-      "Duration": 0,
-      "Value": "0-6"
-    },
-    {
       "PowerHint": "DISPLAY_UPDATE_IMMINENT",
       "Node": "CPULittleClusterDownRateLimitUs",
       "Duration": 50,
@@ -3156,6 +3140,7 @@
       "Value": "20 80"
     }
   ],
+  "GpuSysfsPath" : "/sys/devices/platform/1f000000.mali",
   "AdpfConfig": [
     {
       "Name": "REFRESH_120FPS",
@@ -3188,7 +3173,9 @@
       "HBoostUclampMin": 722,
       "JunkCheckTimeFactor": 1.2,
       "LowFrameRateThreshold": 25,
-      "MaxRecordsNum": 300
+      "MaxRecordsNum": 300,
+      "GpuBoost": true,
+      "GpuCapacityBoostMax": 40000
     },
     {
       "Name": "REFRESH_90FPS",
@@ -3221,7 +3208,9 @@
       "HBoostUclampMin": 722,
       "JunkCheckTimeFactor": 1.2,
       "LowFrameRateThreshold": 25,
-      "MaxRecordsNum": 300
+      "MaxRecordsNum": 300,
+      "GpuBoost": true,
+      "GpuCapacityBoostMax": 32500
     },
     {
       "Name": "REFRESH_60FPS",
@@ -3254,7 +3243,9 @@
       "HBoostUclampMin": 722,
       "JunkCheckTimeFactor": 1.2,
       "LowFrameRateThreshold": 25,
-      "MaxRecordsNum": 300
+      "MaxRecordsNum": 300,
+      "GpuBoost": true,
+      "GpuCapacityBoostMax": 25000
     },
     {
       "Name": "UiHighBoostWithoutPid",
@@ -3276,7 +3267,8 @@
       "UclampMin_Low": 196,
       "ReportingRateLimitNs": 1,
       "TargetTimeFactor": 1.0,
-      "StaleTimeFactor": 5.0
+      "StaleTimeFactor": 5.0,
+      "GpuBoost": false
     },
     {
       "Name": "UiLowBoostWithoutPid",
@@ -3298,7 +3290,8 @@
       "UclampMin_Low": 52,
       "ReportingRateLimitNs": 1,
       "TargetTimeFactor": 1.0,
-      "StaleTimeFactor": 5.0
+      "StaleTimeFactor": 5.0,
+      "GpuBoost": false
     },
     {
       "Name": "UiLowNoneBoost",
@@ -3320,7 +3313,8 @@
       "UclampMin_Low": 0,
       "ReportingRateLimitNs": 1,
       "TargetTimeFactor": 1.0,
-      "StaleTimeFactor": 5.0
+      "StaleTimeFactor": 5.0,
+      "GpuBoost": false
     }
   ]
 }
