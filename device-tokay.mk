@@ -359,38 +359,9 @@ PRODUCT_VENDOR_PROPERTIES += \
 PRODUCT_VENDOR_PROPERTIES += \
     hypervisor.memory_reclaim.supported=1
 
-# Bluetooth LE Audio
-# Unicast
-PRODUCT_PRODUCT_PROPERTIES += \
-	bluetooth.profile.bap.unicast.client.enabled=true \
-	bluetooth.profile.csip.set_coordinator.enabled=true \
-	bluetooth.profile.hap.client.enabled=true \
-	bluetooth.profile.mcp.server.enabled=true \
-	bluetooth.profile.ccp.server.enabled=true \
-	bluetooth.profile.vcp.controller.enabled=true
-
 # Set support one-handed mode
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.support_one_handed_mode=true
-
-# Bluetooth LE Audio Broadcast
-PRODUCT_PRODUCT_PROPERTIES += \
-	bluetooth.profile.bap.broadcast.assist.enabled=true \
-	bluetooth.profile.bap.broadcast.source.enabled=true
-
-# LE Audio switcher in developer options
-PRODUCT_PRODUCT_PROPERTIES += \
-	ro.bluetooth.leaudio_switcher.supported=true \
-
-# Enable hardware offloading
-PRODUCT_PRODUCT_PROPERTIES += \
-	ro.bluetooth.leaudio_offload.supported=true \
-	persist.bluetooth.leaudio_offload.disabled=false
-
-# Bluetooth LE Audio CIS handover to SCO
-# Set the property only for the controller couldn't support CIS/SCO simultaneously. More detailed in b/242908683.
-PRODUCT_PRODUCT_PROPERTIES += \
-	persist.bluetooth.leaudio.notify.idle.during.call=true
 
 # LE Audio Offload Capabilities setting
 PRODUCT_COPY_FILES += \
