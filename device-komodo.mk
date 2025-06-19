@@ -381,50 +381,6 @@ PRODUCT_VENDOR_PROPERTIES += \
 PRODUCT_VENDOR_PROPERTIES += \
     hypervisor.memory_reclaim.supported=1
 
-# Bluetooth LE Audio
-# Unicast
-PRODUCT_PRODUCT_PROPERTIES += \
-	bluetooth.profile.bap.unicast.client.enabled=true \
-	bluetooth.profile.csip.set_coordinator.enabled=true \
-	bluetooth.profile.hap.client.enabled=true \
-	bluetooth.profile.mcp.server.enabled=true \
-	bluetooth.profile.ccp.server.enabled=true \
-	bluetooth.profile.vcp.controller.enabled=true
-
-# Bluetooth LE Audio Broadcast
-PRODUCT_PRODUCT_PROPERTIES += \
-	bluetooth.profile.bap.broadcast.assist.enabled=true \
-	bluetooth.profile.bap.broadcast.source.enabled=true
-
-# LE Audio switcher in developer options
-PRODUCT_PRODUCT_PROPERTIES += \
-	ro.bluetooth.leaudio_switcher.supported=true \
-
-# Enable hardware offloading
-PRODUCT_PRODUCT_PROPERTIES += \
-	ro.bluetooth.leaudio_offload.supported=true \
-	persist.bluetooth.leaudio_offload.disabled=false
-
-# Bluetooth LE Audio CIS handover to SCO
-# Set the property only for the controller couldn't support CIS/SCO simultaneously. More detailed in b/242908683.
-PRODUCT_PRODUCT_PROPERTIES += \
-	persist.bluetooth.leaudio.notify.idle.during.call=true
-
-# Disable LE Audio dual mic SWB call support
-# This may depend on the BT controller capability or the launch strategy
-# For example, P22 BT chip is not able to support 32k dual mic
-# P23a disabled the 32k dual mic as it is not in the phase 2 launch plan
-PRODUCT_PRODUCT_PROPERTIES += \
-    bluetooth.leaudio.dual_bidirection_swb.supported=true
-
-# LE Audio Unicast Allowlist
-PRODUCT_PRODUCT_PROPERTIES += \
-   persist.bluetooth.leaudio.allow_list=SM-R510,WF-1000XM5,SM-R630
-
-# Support LE & Classic concurrent encryption (b/330704060)
-PRODUCT_PRODUCT_PROPERTIES += \
-    bluetooth.ble.allow_enc_with_bredr=true
-
 # Exynos RIL and telephony
 # Support RIL Domain-selection
 SUPPORT_RIL_DOMAIN_SELECTION := true
