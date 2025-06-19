@@ -33,9 +33,5 @@ BOARD_HOSTAPD_CONFIG_80211W_MFP_OPTIONAL := true
 WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WIFI_BRCM_OPEN_SOURCE_MULTI_AKM := enabled
 
-PRODUCT_COPY_FILES += \
-    device/google/caimito/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
-    device/google/caimito/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
-
 # Add WIFI_FEATURE_IMU_DETECTION to soong_config
 $(call soong_config_set,wifi,feature_imu_detection,$(WIFI_FEATURE_IMU_DETECTION))
