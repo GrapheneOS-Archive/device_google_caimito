@@ -90,7 +90,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.se.omapi.ese.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.se.omapi.ese.xml \
 	frameworks/native/data/etc/android.hardware.se.omapi.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.se.omapi.uicc.xml \
-	device/google/caimito/nfc/libse-gto-hal-disable.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libse-gto-hal.conf
 
 # Bluetooth HAL
 PRODUCT_COPY_FILES += \
