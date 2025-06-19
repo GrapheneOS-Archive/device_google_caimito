@@ -54,9 +54,6 @@ $(call soong_config_set,lyric,camera_hardware,ripcurrent)
 $(call soong_config_set,lyric,tuning_product,ripcurrent24)
 $(call soong_config_set,google3a_config,target_device,ripcurrent)
 
-# display
-DEVICE_PACKAGE_OVERLAYS += device/google/caimito/ripcurrent24/overlay
-
 # Init files
 PRODUCT_COPY_FILES += \
 	device/google/caimito/conf/init.ripcurrent24.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.ripcurrent24.rc
