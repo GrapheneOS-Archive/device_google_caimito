@@ -152,8 +152,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.bluetooth.a2dp_offload.disabled=false \
     persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac-opus
 
-# Coex Config
-PRODUCT_SOONG_NAMESPACES += device/google/caimito/radio/tokay/coex
 PRODUCT_PACKAGES += \
     camera_front_dbr_coex_table \
     camera_front_mipi_coex_table \
