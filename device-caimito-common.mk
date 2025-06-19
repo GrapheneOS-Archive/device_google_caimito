@@ -35,16 +35,6 @@ PRODUCT_COPY_FILES += \
         endif
 endif
 
-# Power HAL config
-ifeq (,$(TARGET_VENDOR_PERF_CONFIG_PATH))
-TARGET_VENDOR_PERF_CONFIG_PATH := device/google/caimito/perf
-endif
-
-PRODUCT_COPY_FILES += \
-	$(TARGET_VENDOR_PERF_CONFIG_PATH)/powerhint-$(TARGET_DEVICE).json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
-PRODUCT_COPY_FILES += \
-	$(TARGET_VENDOR_PERF_CONFIG_PATH)/powerhint-zuma.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint-proto.json
-
 # Telephony Satellite Feature
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.satellite.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.satellite.xml
