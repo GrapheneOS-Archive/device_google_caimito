@@ -15,8 +15,3 @@
 #
 
 AUDIO_FACTORY_TABLE_FOLDER := ripcurrentpro
-
-# Mixer Path Configuration for Audio Factory
-PRODUCT_COPY_FILES += \
-    device/google/caimito/audio/$(AUDIO_FACTORY_TABLE_FOLDER)/config/mixer_paths_factory.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_factory.xml
-
