@@ -278,10 +278,6 @@ PRODUCT_PACKAGES += \
 # 	ro.hardware.keystore=software \
 # 	ro.hardware.gatekeeper=software
 
-# PowerStats HAL
-PRODUCT_SOONG_NAMESPACES += \
-    device/google/caimito/powerstats/caiman
-
 # UWB Overlay
 PRODUCT_PACKAGES += \
     UwbOverlayCM4
