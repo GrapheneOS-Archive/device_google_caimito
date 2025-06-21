@@ -144,9 +144,6 @@ PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.se.omapi.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.se.omapi.uicc.xml \
 	device/google/caimito/nfc/libse-gto-hal.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libse-gto-hal.conf
 
-# Bluetooth HAL
-PRODUCT_COPY_FILES += \
-	device/google/caimito/bluetooth/bt_vendor_overlay_tokay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/bt_vendor_overlay.conf
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.bluetooth.a2dp_offload.supported=true \
     persist.bluetooth.a2dp_offload.disabled=false \
@@ -161,14 +158,6 @@ PRODUCT_PACKAGES += \
     camera_rear_wide_mipi_coex_table \
     display_primary_mipi_coex_table \
     display_primary_ssc_coex_table
-
-# Bluetooth Tx power caps
-PRODUCT_COPY_FILES += \
-        $(LOCAL_PATH)/bluetooth/bluetooth_power_limits_tokay.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits.csv \
-        $(LOCAL_PATH)/bluetooth/bluetooth_power_limits_tokay_JP.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_JP.csv \
-        $(LOCAL_PATH)/bluetooth/bluetooth_power_limits_tokay_CA.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_CA.csv \
-        $(LOCAL_PATH)/bluetooth/bluetooth_power_limits_tokay_EU.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_EU.csv \
-        $(LOCAL_PATH)/bluetooth/bluetooth_power_limits_tokay_US.csv:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_power_limits_US.csv
 
 # DCK properties based on target
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -397,10 +386,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PRODUCT_PROPERTIES += \
 	persist.bluetooth.leaudio.notify.idle.during.call=true
 
-# LE Audio Offload Capabilities setting
-PRODUCT_COPY_FILES += \
-    device/google/caimito/bluetooth/le_audio_codec_capabilities.xml:$(TARGET_COPY_OUT_VENDOR)/etc/le_audio_codec_capabilities.xml
-
 # Disable LE Audio dual mic SWB call support
 # This may depend on the BT controller capability or the launch strategy
 # For example, P22 BT chip is not able to support 32k dual mic
@@ -466,13 +451,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Reduce lmkd aggressiveness
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.lmk.swap_free_low_percentage=7
-
-# LE Audio configuration scenarios
-PRODUCT_COPY_FILES += \
-    device/google/caimito/bluetooth/audio_set_scenarios.json:$(TARGET_COPY_OUT_VENDOR)/etc/aidl/le_audio/aidl_audio_set_scenarios.json
-
-PRODUCT_COPY_FILES += \
-    device/google/caimito/bluetooth/audio_set_configurations.json:$(TARGET_COPY_OUT_VENDOR)/etc/aidl/le_audio/aidl_audio_set_configurations.json
 
 # Enable APF by default
 PRODUCT_VENDOR_PROPERTIES += \
