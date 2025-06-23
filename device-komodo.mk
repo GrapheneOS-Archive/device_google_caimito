@@ -226,9 +226,6 @@ PRODUCT_PACKAGES += \
     libthermal_tflite_wrapper
 
 PRODUCT_VENDOR_PROPERTIES += \
-	persist.device_config.configuration.disable_rescue_party=true
-
-PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.udfps.als_feed_forward_supported=true \
     persist.vendor.udfps.lhbm_controlled_in_hal_supported=true
 
