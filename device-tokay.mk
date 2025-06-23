@@ -236,10 +236,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     device/google/caimito/tokay/tokay-component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/tokay-component-overrides.xml
 
-# Reduce lmkd aggressiveness
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.lmk.swap_free_low_percentage=7
-
 # Enable APF by default
 PRODUCT_VENDOR_PROPERTIES += \
     vendor.powerhal.apf_disabled=false \
