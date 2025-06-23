@@ -192,10 +192,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
     persist.bluetooth.vendor.btsnoop=true
 endif
 
-# default BDADDR for EVB only
-PRODUCT_PROPERTY_OVERRIDES += \
-	ro.vendor.bluetooth.evb_bdaddr="22:22:22:33:44:55"
-
 # Spatial Audio
 PRODUCT_PACKAGES += \
 	libspatialaudio \
