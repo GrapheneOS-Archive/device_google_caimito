@@ -220,12 +220,6 @@ PRODUCT_SOONG_NAMESPACES += device/google/caimito/location/caiman
 $(call soong_config_set, gpssdk, buildtype, $(TARGET_BUILD_VARIANT))
 PRODUCT_PACKAGES += gps.cfg
 
-# Display LBE
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += vendor.display.lbe.supported=1
-
-# Display ACL
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += vendor.display.0.brightness.acl.default=1
-
 #Thermal VT estimator
 PRODUCT_PACKAGES += \
     libthermal_tflite_wrapper

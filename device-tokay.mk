@@ -206,12 +206,6 @@ PRODUCT_SOONG_NAMESPACES += device/google/caimito/location/tokay
 $(call soong_config_set, gpssdk, buildtype, $(TARGET_BUILD_VARIANT))
 PRODUCT_PACKAGES += gps.cfg
 
-# Display function property settings
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    vendor.display.lbe.supported=1 \
-    ro.vendor.primarydisplay.google-tk4c.temperature_path=/dev/thermal/tz-by-name/disp_therm/temp \
-    ro.vendor.display.read_temp_interval=30
-
 #Thermal VT estimator
 PRODUCT_PACKAGES += \
     libthermal_tflite_wrapper
