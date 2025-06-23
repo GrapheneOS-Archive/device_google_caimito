@@ -161,10 +161,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	libspatialaudio
 
-# declare use of spatial audio
-PRODUCT_PROPERTY_OVERRIDES += \
-       ro.audio.spatializer_enabled=true
-
 ifneq ($(USE_AUDIO_HAL_AIDL),true)
 # HIDL Sound Dose
 PRODUCT_PACKAGES += \
