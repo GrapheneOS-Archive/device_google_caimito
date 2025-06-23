@@ -224,9 +224,6 @@ PRODUCT_PACKAGES += gps.cfg
 PRODUCT_PACKAGES += \
     libthermal_tflite_wrapper
 
-# Media Performance Class 15
-PRODUCT_PRODUCT_PROPERTIES += ro.odm.build.media_performance_class=35
-
 # Display RRS default Config
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += persist.vendor.display.primary.boot_config=960x2142@120:120
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.vendor.primarydisplay.preferred_mode=960x2142@120:120

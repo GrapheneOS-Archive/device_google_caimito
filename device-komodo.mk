@@ -225,9 +225,6 @@ PRODUCT_PACKAGES += gps.cfg
 PRODUCT_PACKAGES += \
     libthermal_tflite_wrapper
 
-# Media Performance Class 15
-PRODUCT_PRODUCT_PROPERTIES += ro.odm.build.media_performance_class=35
-
 # Vibrator HAL
 $(call soong_config_set,haptics,kernel_ver,v$(subst .,_,$(TARGET_LINUX_KERNEL_VERSION)))
 ACTUATOR_MODEL := luxshare_ict_081545
