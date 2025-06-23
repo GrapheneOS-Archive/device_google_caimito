@@ -157,10 +157,6 @@ PRODUCT_PACKAGES += \
     display_primary_mipi_coex_table \
     display_primary_ssc_coex_table
 
-# POF
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.bluetooth.finder.supported=true
-
 # Spatial Audio
 PRODUCT_PACKAGES += \
 	libspatialaudio
