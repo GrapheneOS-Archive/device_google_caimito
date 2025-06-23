@@ -118,25 +118,6 @@ $(call soong_config_set,lyric,camera_hardware,komodo)
 $(call soong_config_set,lyric,tuning_product,komodo)
 $(call soong_config_set,google3a_config,target_device,komodo)
 
-# Display RRS default Config
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += persist.vendor.display.primary.boot_config=1008x2244@120:120
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.vendor.primarydisplay.preferred_mode=1008x2244@120:120
-
-ifeq ($(filter factory_komodo, $(TARGET_PRODUCT)),)
-    PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.vendor.primarydisplay.xrr.version=2.1
-    PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.vendor.primarydisplay.blocking_zone.min_refresh_rate_by_nits=:1
-    PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.vendor.primarydisplay.vrr.expected_present.headsup_ns=30000000
-    PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.vendor.primarydisplay.vrr.expected_present.timeout_ns=500000000
-endif
-
-# Display OP HZ Config
-PRODUCT_VENDOR_PROPERTIES += \
-    vendor.primarydisplay.op.hs_hz=120 \
-    vendor.primarydisplay.op.ns_hz=120
-
-# Display fixed TE2
-PRODUCT_VENDOR_PROPERTIES += vendor.primarydisplay.fixed_te2.default_rate_hz=120
-
 # Init files
 PRODUCT_COPY_FILES += \
 	device/google/caimito/conf/init.komodo.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.komodo.rc
