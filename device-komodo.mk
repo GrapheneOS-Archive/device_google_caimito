@@ -143,10 +143,6 @@ PRODUCT_VENDOR_PROPERTIES += vendor.primarydisplay.fixed_te2.default_rate_hz=120
 PRODUCT_COPY_FILES += \
 	device/google/caimito/conf/init.komodo.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.komodo.rc
 
-# Recovery files
-PRODUCT_COPY_FILES += \
-        device/google/caimito/conf/init.recovery.device.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.komodo.rc
-
 # NFC
 PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.nfc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.xml \
