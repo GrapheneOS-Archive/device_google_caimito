@@ -239,10 +239,6 @@ SUPPORT_VENDOR_SATELLITE_SERVICE := true
 # Support NTN(satellite) with dual SIM
 NTN_DUAL_SIM := true
 
-# Enable Bluetooth AutoOn feature
-PRODUCT_PRODUCT_PROPERTIES += \
-    bluetooth.server.automatic_turn_on=true
-
 # Window Extensions
 $(call inherit-product, $(SRC_TARGET_DIR)/product/window_extensions.mk)
 
