@@ -225,22 +225,6 @@ PRODUCT_PACKAGES += gps.cfg
 PRODUCT_PACKAGES += \
     libthermal_tflite_wrapper
 
-# OIS with system imu
-PRODUCT_VENDOR_PROPERTIES += \
-    persist.vendor.camera.ois_with_system_imu=true
-
-# Allow external binning setting
-PRODUCT_VENDOR_PROPERTIES += \
-    persist.vendor.camera.allow_external_binning_setting=true
-
-# Camera Vendor property
-PRODUCT_VENDOR_PROPERTIES += \
-    persist.vendor.camera.front_720P_always_binning=true
-
-# Enable camera exif model/make reporting
-PRODUCT_VENDOR_PROPERTIES += \
-    persist.vendor.camera.exif_reveal_make_model=true
-
 # Media Performance Class 15
 PRODUCT_PRODUCT_PROPERTIES += ro.odm.build.media_performance_class=35
 
