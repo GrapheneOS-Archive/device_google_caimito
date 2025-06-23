@@ -171,10 +171,6 @@ endif
 PRODUCT_PACKAGES += \
     libspeechenhancer
 
-# Audio CCA property
-PRODUCT_PROPERTY_OVERRIDES += \
-	persist.vendor.audio.cca.enabled=false
-
 # Bluetooth hci_inject test tool
 PRODUCT_PACKAGES_DEBUG += \
     hci_inject
