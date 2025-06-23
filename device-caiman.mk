@@ -229,10 +229,6 @@ $(call soong_config_set,haptics,kernel_ver,v$(subst .,_,$(TARGET_LINUX_KERNEL_VE
 ACTUATOR_MODEL := luxshare_ict_081545
 ADAPTIVE_HAPTICS_FEATURE := adaptive_haptics_v1
 
-# PKVM Memory Reclaim
-PRODUCT_VENDOR_PROPERTIES += \
-    hypervisor.memory_reclaim.supported=1
-
 # Set support one-handed mode
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.support_one_handed_mode=true
