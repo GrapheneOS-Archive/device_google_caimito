@@ -239,10 +239,6 @@ SUPPORT_VENDOR_SATELLITE_SERVICE := true
 # Support NTN(satellite) with dual SIM
 NTN_DUAL_SIM := true
 
-# Set support one-handed mode
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.support_one_handed_mode=true
-
 # Keyboard height ratio and bottom padding in dp for portrait mode
 PRODUCT_PRODUCT_PROPERTIES += \
           ro.com.google.ime.kb_pad_port_b=9.6 \
