@@ -108,9 +108,6 @@ $(call soong_config_set,lyric,camera_hardware,tokay)
 $(call soong_config_set,lyric,tuning_product,tokay)
 $(call soong_config_set,google3a_config,target_device,tokay)
 
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.set_idle_timer_ms=1000
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.surface_flinger.ignore_hdr_camera_layers=true
-
 # Init files
 PRODUCT_COPY_FILES += \
 	device/google/caimito/conf/init.tokay.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.tokay.rc
