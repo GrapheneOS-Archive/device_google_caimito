@@ -156,11 +156,6 @@ PRODUCT_PACKAGES += \
     camera_rear_wide_mipi_coex_table \
     display_primary_mipi_coex_table
 
-# DCK properties based on target
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.gms.dck.eligible_wcc=3 \
-    ro.gms.dck.se_capability=1
-
 # POF
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.bluetooth.finder.supported=true
