@@ -240,15 +240,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     device/google/caimito/tokay/tokay-component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/tokay-component-overrides.xml
 
-# Bluetooth device id
-# Tokay: 0x4112
-PRODUCT_PRODUCT_PROPERTIES += \
-    bluetooth.device_id.product_id=16658
-
-# Set support for LEA multicodec
-PRODUCT_PRODUCT_PROPERTIES += \
-    bluetooth.core.le_audio.codec_extension_aidl.enabled=true
-
 # Reduce lmkd aggressiveness
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.lmk.swap_free_low_percentage=7

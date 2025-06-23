@@ -254,15 +254,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     device/google/caimito/caiman/caiman-component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/caiman-component-overrides.xml
 
-# Bluetooth device id
-# Caiman: 0x4110
-PRODUCT_PRODUCT_PROPERTIES += \
-    bluetooth.device_id.product_id=16656
-
-# Set support for LEA multicodec
-PRODUCT_PRODUCT_PROPERTIES += \
-    bluetooth.core.le_audio.codec_extension_aidl.enabled=true
-
 # Enable APF by default
 PRODUCT_VENDOR_PROPERTIES += \
     vendor.powerhal.apf_disabled=false \
