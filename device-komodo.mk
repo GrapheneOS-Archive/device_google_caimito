@@ -68,7 +68,6 @@ ifeq ($(filter factory_komodo, $(TARGET_PRODUCT)),)
 endif
 
 # display
-DEVICE_PACKAGE_OVERLAYS += device/google/caimito/komodo/overlay
 
 ifeq ($(RELEASE_PIXEL_AIDL_AUDIO_HAL),true)
 USE_AUDIO_HAL_AIDL := true
@@ -137,8 +136,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
 	$(RELEASE_PACKAGE_NFC_STACK) \
 	Tag \
-	android.hardware.nfc-service.st \
-	NfcOverlayKomodo
+	android.hardware.nfc-service.st
 
 # SecureElement
 PRODUCT_PACKAGES += \
@@ -188,18 +186,6 @@ PRODUCT_PACKAGES += \
 	libspatialaudio \
 	librondo
 
-# UWB Overlay
-PRODUCT_PACKAGES += \
-    UwbOverlayKM4
-
-# WiFi Overlay
-PRODUCT_PACKAGES += \
-    WifiOverlay2024
-
-# Settings Overlay
-PRODUCT_PACKAGES += \
-    SettingsKomodoOverlay
-
 # Trusty liboemcrypto.so
 PRODUCT_SOONG_NAMESPACES += vendor/google_devices/caimito/prebuilts
 
@@ -237,10 +223,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/window_extensions.mk)
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
 $(call inherit-product-if-exists, device/google/common/etm/device-userdebug-modules.mk)
 endif
-
-# Connectivity Resources Overlay for Thread host settings
-PRODUCT_PACKAGES += \
-    ConnectivityResourcesOverlayCaimitoOverride
 
 #Component Override for Pixel Troubleshooting App
 PRODUCT_COPY_FILES += \
